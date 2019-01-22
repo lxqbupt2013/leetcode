@@ -31,6 +31,8 @@
  * @param {function} isBadVersion()
  * @return {function}
  */
+
+ // 二分查找
 var solution = module.exports = function (isBadVersion) {
   /**
    * @param {integer} n Total versions

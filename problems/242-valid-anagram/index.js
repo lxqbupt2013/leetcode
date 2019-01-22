@@ -20,6 +20,9 @@
  * @param {string} t
  * @return {boolean}
  */
+
+// 字符串比较转化为哈希。
+// S串＋，T串－，最后找是否有hash值不为0的
 var isAnagram = module.exports = function (s, t) {
   if (s === '' && t === '') return true;
   if (s.length !== t.length) return false;
