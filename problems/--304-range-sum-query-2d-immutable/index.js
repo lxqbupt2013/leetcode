@@ -29,6 +29,8 @@
  * @constructor
  * @param {number[][]} matrix
  */
+
+// dp[r][c] 表示（0,0）到（r,c）
 var NumMatrix = module.exports = function (matrix) {
   if (matrix.length === 0 || matrix[0].length === 0) return;
   this.dp = [];

@@ -12,6 +12,7 @@
  * @param {string} s
  * @return {number}
  */
+// 滑动窗口
 var lengthOfLongestSubstring = module.exports = function (s) {
   if (s.length === 0) {
     return 0;
