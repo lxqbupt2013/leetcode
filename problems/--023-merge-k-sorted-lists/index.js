@@ -22,6 +22,7 @@ var ListNode = require('../../structures/ListNode');
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
+// 递归
 var mergeKLists = module.exports = function (lists) {
   if (lists.length === 0) return null;
   if (lists.length === 1) return lists[0];

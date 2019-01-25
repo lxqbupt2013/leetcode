@@ -44,12 +44,12 @@ var addTwoNumbers = module.exports = function (listA, listB) {
     sum = (tmpA === null ? 0 : tmpA.val) + (tmpB === null ? 0 : tmpB.val) + carry;
     if (!tmpNode) {
       // tmpNode 与 result 都是引用对象，引用对象指向同一个对象
+      // 第一个节点
       tmpNode = result = new ListNode(sum % 10);
     } else {
       // tmpNode存储的是result对象逐级往下的next值
       tmpNode.next = new ListNode(sum % 10);
-      tmpNode = tmpNode.next;
-      console.log(tmpNode);
+      tmpNode = tmpNode.next;  // 新ListNode
     }
     carry = sum > 9 ? 1 : 0;
     if (tmpA !== null) {

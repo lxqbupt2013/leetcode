@@ -29,6 +29,9 @@
  * @param {number} n
  * @return {ListNode}
  */
+
+// 用一个stack（数组实现的）来临时存储ListNode的node
+// 用数组的原因是数组可以按所以取值，而ListNode必须从前往后遍历
 var removeNthFromEnd = module.exports = function (head, n) {
   if (n === 0) return head;
   var stack = [];
@@ -37,6 +40,7 @@ var removeNthFromEnd = module.exports = function (head, n) {
     stack.push(node);
     node = node.next;
   }
+  // 如果要删除的是第一个节点，则返回第二个节点
   if (stack.length - n - 1 === -1) {
     return head.next;
   }

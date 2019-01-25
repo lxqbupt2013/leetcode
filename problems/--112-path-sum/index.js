@@ -29,6 +29,7 @@
  * @param {number} sum
  * @return {boolean}
  */
+// 递归解法
 var hasPathSum = module.exports = function (root, sum) {
   if (root === null) return false;
   if (root.val === sum && root.left === null && root.right === null) return true;
