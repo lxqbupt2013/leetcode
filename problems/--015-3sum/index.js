@@ -88,11 +88,13 @@
 // 如果遇到相邻数相等，则继续遍历，否则会造成重复
 var threeSum = module.exports = function (nums) {
 	var result = [];
+
+	nums.sort((a, b) => a - b);
 	
 	for(var k=0;k < nums.length;k++){
 		if(nums[k] > 0){
 	       break;
-      }
+        }
     
     // 如果新的nums[k]和前值一样，则已经计算过，不必重复计算
 		if(k > 0 && (nums[k] == nums[k-1])){
