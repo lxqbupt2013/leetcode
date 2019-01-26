@@ -16,17 +16,26 @@
 var generateParenthesis = module.exports = function (n) {
   if (n === 0) return [];
   if (n === 1) return ['()'];
-  var minus1Result = generateParenthesis(n - 1);
-  var result = [];
-  var existsHash = {};
-  var tempStr;
-  minus1Result.forEach(function (str) {
-    for (var i = 0; i < n; i++) {
-      tempStr = str.slice(0, i) + '()' + str.slice(i);
-      if (existsHash[tempStr]) continue;
-      existsHash[tempStr] = true;
-      result.push(tempStr);
-    }
-  });
-  return result;
+  
+  var left = n;
+  var right = n;
+  var stack = [];
+  
+  a(n, n, stack, '')
+  
+  return stack;
+};
+
+var a = function (left, right, stack, tempStr) {
+  
+  if (left === 0 && right === 0) {
+     stack.push(tempStr); 
+  }
+  if (left > 0) {
+      a(left-1, right, stack, tempStr + '(');
+  }
+  if (right > 0 && right > left) {
+      a(left, right-1, stack, tempStr + ')');
+  }
+
 };

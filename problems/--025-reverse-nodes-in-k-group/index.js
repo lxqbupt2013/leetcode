@@ -86,3 +86,63 @@ function reverseNodes(head, k) {
     tempNode2 = tempNode3;
   }
 }
+
+
+
+// var reverseKGroup = function(head, k) {
+//   if (k === 0 || k === 1) return head;
+//   var stack = [];
+//   var result = new ListNode(head.val);
+//   var last = result.next;;
+  
+//   var node = head;
+//   var _head = head;
+  
+//   while (node !== null) {
+      
+//       stack.push(node);
+//       node = node.next;
+      
+//       if(stack.length === k) {
+//           last = reverseList(_head);
+//           last = last.next;
+//           _head = node;
+//           stack = [];
+//       }
+//   }
+//   return result;
+// };
+
+// var reverseList = function(head) {
+//   let pre = null;
+//   while(head) {
+//       const next = head.next;
+//       head.next = pre;
+//       pre = head;
+//       head = next;
+//   }
+//   return pre;
+// }
+
+// function ListNode(val) {
+//   this.val = val;
+//   this.next = null;
+// }
+
+// ListNode.generateList = function (num) {
+//   var numbers = num.toString().split('').map(Number);
+//   var result;
+//   var tmp;
+//   numbers.forEach(function (number, index) {
+//     if (index === 0) {
+//       result = new ListNode(number);
+//       return;
+//     }
+//     tmp = new ListNode(number);
+//     tmp.next = result;
+//     result = tmp;
+//   });
+//   return result;
+// };
+
+// reverseKGroup(ListNode.generateList(531), 2)

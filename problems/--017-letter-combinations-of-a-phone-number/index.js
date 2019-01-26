@@ -33,12 +33,17 @@ var digitMap = {
 var letterCombinations = module.exports = function (digits) {
   if (digits.length === 0) return [];
   if (digits.length === 1) return digitMap[digits[0]];
+  
   var result = [];
-  var restResult = letterCombinations(digits.slice(1));
-  digitMap[digits[0]].forEach(function (letter) {
-    result = result.concat(restResult.map(function (item) {
-      return letter + item;
-    }));
-  });
+  
+  var subRes = letterCombinations(digits.slice(1));
+  
+  digitMap[digits[0]].forEach(function(char) {
+      var temp = subRes.map(function (item) {
+          return char + item;
+      })
+      result = result.concat(temp);
+  })
+  
   return result;
 };
