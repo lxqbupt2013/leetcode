@@ -48,6 +48,8 @@ var TreeNode = require('../../structures/TreeNode');
  * @param {TreeNode} root
  * @return {string}
  */
+
+ // 递归
 var serialize = exports.serialize = function (root) {
   return JSON.stringify(ser(root));
 
