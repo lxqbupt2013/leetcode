@@ -56,3 +56,14 @@ var maxPathSum = module.exports = function (root) {
     };
   }
 };
+
+
+var maxPathSum = module.exports = function (root) {
+  if (root === null) return 0;
+  var max;
+
+  var dp = [];
+
+  dp[root] = Math.max(maxPathSum(root.left.val) + root.val + maxPathSum(root.right.val),
+
+};

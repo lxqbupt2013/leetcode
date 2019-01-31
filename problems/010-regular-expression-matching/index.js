@@ -18,7 +18,7 @@
  * isMatch("aa", "a*") → true
  * isMatch("aa", ".*") → true
  * isMatch("ab", ".*") → true
- * isMatch("aab", "c*a*b") → true
+ * isMatch("aab", "a*a*b") → true
  */
 
 /**
