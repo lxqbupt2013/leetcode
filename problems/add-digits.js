@@ -8,14 +8,13 @@
  */
 // 把各位数字相加，直到剩个位
 var addDigits = function(num) {
-  while(num.toString().length !== 1) {
-    var sum = 0;
-    while (num) {
-      sum += num % 10;
-      num = ~~(num / 10);
-    }
-    num = sum;
-  }
+    return ((num - 1) % 9 + 1);
+};
 
-  return num;
+
+function addDigits(num) {
+  if (!num) {
+    return 0;
+  }
+  return num % 9 || 9; // pattern goes 1-9 then repeats
 };

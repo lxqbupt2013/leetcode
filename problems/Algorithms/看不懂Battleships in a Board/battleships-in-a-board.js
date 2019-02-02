@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/battleships-in-a-board/
-// Author : Han Zichi
-// Date   : 2016-10-17
 
 "use strict";
 
