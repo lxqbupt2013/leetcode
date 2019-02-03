@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/odd-even-linked-list/
-// Author : Han Zichi
-// Date   : 2016-05-06
 
 /**
  * Definition for singly-linked list.

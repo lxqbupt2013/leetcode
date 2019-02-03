@@ -17,3 +17,24 @@ var isPowerOfThree = function (n) {
   if (n === 0) return false;
   return (n > 0 && 1162261467 % n === 0);
 };
+
+
+var isPowerOfThree = function(n) {
+  if (!n) return false;
+  var a = Math.log(n) / Math.log(3);
+  return Math.pow(3, Math.floor(a)) === n || Math.pow(3, Math.ceil(a)) === n;
+};
+
+
+// power of four
+/**
+ * @param {number} num
+ * @return {boolean}
+ */
+var isPowerOfFour = function(num) {
+  if (!num)
+    return false;
+
+  var a = Math.log(num) / Math.log(4);
+  return Math.pow(4, Math.floor(a)) === num || Math.pow(4, Math.ceil(a)) === num;
+};
