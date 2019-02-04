@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
-// Author : Han Zichi
-// Date   : 2016-08-26
 
 /**
  * Definition for a binary tree node.
@@ -22,7 +20,7 @@ var buildTree = function(inorder, postorder) {
       return null;
 
     var node = new TreeNode(postorder[index]);
-    var pos = inorder.indexOf(postorder[index], startPos);
+    var pos = inorder.indexOf(postorder[index]);
 
     node.left = dfs(index - (endPos - pos) - 1, startPos, pos - 1);
     node.right = dfs(index - 1, pos + 1, endPos);

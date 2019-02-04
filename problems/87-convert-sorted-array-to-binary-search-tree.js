@@ -14,17 +14,10 @@
  * @return {TreeNode}
  */
 var sortedArrayToBST = function(nums) {
-  return dfs(0, nums.length - 1);
-
-  function dfs(start, end) {
-    if (start > end)
-      return null;
-
-    var mid = (start + end) >> 1;
-    var node = new TreeNode(nums[mid]);
-    node.left = dfs(start, mid - 1);
-    node.right = dfs(mid + 1, end);
-
-    return node;
-  }
-};
+  if(!nums.length) return null;   
+  var mid = Math.floor((nums.length)/2);
+  var root = new TreeNode(nums[mid]);
+  root.left = sortedArrayToBST(nums.slice(0, mid));
+  root.right = sortedArrayToBST(nums.slice(mid+1));
+  return root;
+}
