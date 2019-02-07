@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/utf-8-validation/
-// Author : Han Zichi
-// Date   : 2016-09-05
 
 /**
  * @param {number[]} data

@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
-// Author : Han Zichi
-// Date   : 2015-09-16
 
 /**
  * Definition for a binary tree node.

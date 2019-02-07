@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/super-pow/
-// Author : Han Zichi
-// Date   : 2016-08-08
 
 /**
  * @param {number} a

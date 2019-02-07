@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
-// Author : Han Zichi
-// Date   : 2016-08-25
 
 /**
  * Definition for a binary tree node.

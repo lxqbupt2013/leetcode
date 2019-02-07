@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/restore-ip-addresses/
-// Author : Han Zichi
-// Date   : 2015-09-11
 
 /**
  * @param {string} s

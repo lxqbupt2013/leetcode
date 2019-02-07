@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/combination-sum/
-// Author : Han Zichi
-// Date   : 2015-08-18
 
 /**
  * @param {number[]} candidates

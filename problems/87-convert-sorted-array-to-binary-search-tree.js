@@ -1,6 +1,4 @@
 // Source : https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
-// Author : Han Zichi
-// Date   : 2016-08-28
 
 /**
  * Definition for a binary tree node.
