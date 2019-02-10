@@ -26,7 +26,7 @@
  */
 
 // 思路： nums正序排列，给定一个nums[k],如果nums[k]>0，nums[k + n]不能满足
-// 设置两个指针，一个从k(left)，一个从数组最后(right)开始便利
+// 设置两个指针，一个从k(left)，一个从数组最后(right)开始遍历
 // 若和大于0，说明right大了，right--；若和小于0，说明left大了,left++
 // 如果遇到相邻数相等，则继续遍历，否则会造成重复
 var threeSum = function (nums) {

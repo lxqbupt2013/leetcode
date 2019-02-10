@@ -31,7 +31,7 @@
  */
 
 // 用一个stack（数组实现的）来临时存储ListNode的node
-// 用数组的原因是数组可以按所以取值，而ListNode必须从前往后遍历
+// 用数组的原因是数组可以按索引取值，而ListNode必须从前往后遍历
 var removeNthFromEnd = function (head, n) {
   if (n === 0) return head;
   var stack = [];
