@@ -9,6 +9,8 @@
  *     this.next = null;
  * }
  */
+// Input: (7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
+// Output: 7 -> 8 -> 0 -> 7
 /**
  * @param {ListNode} l1
  * @param {ListNode} l2

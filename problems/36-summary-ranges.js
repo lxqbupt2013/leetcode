@@ -42,7 +42,7 @@ var summaryRanges = function(nums) {
       result.push(str);
     }
 
-    if( nums[nums.length - 1] === start) {
+    if(nums[nums.length - 1] === start) {
       result.push(tmp.toString());
     }
   }
