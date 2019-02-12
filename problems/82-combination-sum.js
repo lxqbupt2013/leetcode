@@ -11,6 +11,7 @@ var combinationSum = function(candidates, target) {
   const dfs = (arr, tmpArr, remain, start) => {
     if (remain < 0) return;
     if (remain === 0) {
+      // slice是为了copy一份tmpArr
       result.push(tmpArr.slice());
       return;
     }
