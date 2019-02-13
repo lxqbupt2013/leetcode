@@ -4,10 +4,6 @@
  * @param {number} n - a positive integer
  * @return {number} - a positive integer
  */
-/**
- * @param {number} n - a positive integer
- * @return {number} - a positive integer
- */
 var reverseBits = function(n) {
   var t = n.toString(2);
   

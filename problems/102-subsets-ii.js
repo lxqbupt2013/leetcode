@@ -21,23 +21,3 @@ var subsetsWithDup = function(nums) {
   
   return result;
 };
-
-
-var subsetsWithDup = function(nums) {
-  nums.sort((a, b) => a - b);
-  let r = [];
-  const func = (arr, _r='') => {
-    if (arr.length === 0) {
-      if (!r.includes(_r)) {
-        r.push(_r);
-      }
-      return;
-    }
-    func(arr.slice(1), _r === '' ? `${arr[0]}` : `${_r}|${arr[0]}`);
-    func(arr.slice(1), _r);
-  }
-  
-  func(nums);
-  
-  return r.map(_r => _r === '' ? [] : _r.split('|').map(_n => +_n));
-};
