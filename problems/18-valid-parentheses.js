@@ -25,6 +25,7 @@ var isValid = function (s) {
         (stack[stack.length - 1] === '[' && s[i] === ']') ||
         (stack[stack.length - 1] === '{' && s[i] === '}')
       ) {
+        // stack弹出元素
         stack.pop();
       } else {
         return false;

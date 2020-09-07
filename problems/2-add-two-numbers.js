@@ -41,7 +41,11 @@ var addTwoNumbers = function (listA, listB) {
   var carry;
   carry = 0;
   while (tmpA !== null || tmpB !== null) {
+
+    // 关键一： 得到每两个节点的和存起来，后面用于判断进位
     sum = (tmpA === null ? 0 : tmpA.val) + (tmpB === null ? 0 : tmpB.val) + carry;
+
+    // 关键二： temNode用于将两个节点相加后往后索引，并将结果存储在result里
     if (!tmpNode) {
       // tmpNode 与 result 都是引用对象，引用对象指向同一个对象
       // 第一个节点

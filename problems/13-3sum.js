@@ -32,6 +32,7 @@
 var threeSum = function (nums) {
 	var result = [];
 
+	// 数组排序
 	nums.sort((a, b) => a - b);
 	
 	for(var k=0;k < nums.length;k++){
@@ -39,7 +40,7 @@ var threeSum = function (nums) {
 	       break;
         }
     
-    // 如果新的nums[k]和前值一样，则已经计算过，不必重复计算
+        // 如果新的nums[k]和前值一样，则已经计算过，不必重复计算
 		if(k > 0 && (nums[k] == nums[k-1])){
 		   continue;
 		}

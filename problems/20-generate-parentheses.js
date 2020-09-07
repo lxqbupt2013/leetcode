@@ -13,6 +13,9 @@
  * @param {number} n
  * @return {string[]}
  */
+
+ // 思路： 两个计数器，一个用来存储左符号剩余个数，一个用来记录右符号剩余个数
+ // 只要左符号数比右符号数多即可
 var generateParenthesis = function (n) {
   if (n === 0) return [];
   if (n === 1) return ['()'];
@@ -26,6 +29,7 @@ var generateParenthesis = function (n) {
   return stack;
 };
 
+// 递归子串
 var a = function (left, right, stack, tempStr) {
   
   if (left === 0 && right === 0) {

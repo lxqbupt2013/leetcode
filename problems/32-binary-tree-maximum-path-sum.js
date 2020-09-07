@@ -55,6 +55,7 @@ var maxPathSum = function (root) {
   var dfs = function(root) {
     if (root === null) return 0;
 
+    // 关键点： 遍历左右子树写法
     var left = root.left === null ? 0 : dfs(root.left);
     var right = root.right === null ? 0 : dfs(root.right);
 

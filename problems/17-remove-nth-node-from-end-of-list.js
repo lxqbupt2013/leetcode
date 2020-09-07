@@ -36,6 +36,8 @@ var removeNthFromEnd = function (head, n) {
   if (n === 0) return head;
   var stack = [];
   var node = head;
+
+  // 链表遍历的写法
   while (node !== null) {
     stack.push(node);
     node = node.next;

@@ -9,6 +9,8 @@
  * @param {string[]} strs
  * @return {string}
  */
+
+ // 思路： 先找到最短长度的str，将位数比较的函数抽离出来
 var longestCommonPrefix = function (strs) {
   var strsLength = strs.length;
   if (strsLength === 0) return '';

@@ -36,7 +36,7 @@ var letterCombinations = function (digits) {
   
   var result = [];
   
-  var subRes = letterCombinations(digits.slice(1));
+  var subRes =  (digits.slice(1));
   
   digitMap[digits[0]].forEach(function(char) {
       var temp = subRes.map(function (item) {

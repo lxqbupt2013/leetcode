@@ -31,6 +31,8 @@
 var isMatch = function (s, p) {
   var sLength = s.length;
   var pLength = p.length;
+
+  // 关键点一： 针对几种特殊情况特殊处理
   if (pLength === 0) return sLength === 0;
   if (pLength === 1) {
     if (sLength !== 1) return false;
@@ -40,9 +42,13 @@ var isMatch = function (s, p) {
   if (p[1] !== '*') {
     if (sLength === 0) return false;
     if (s[0] !== p[0] && p[0] !== '.') return false;
+    // 关键点二： 递归调用自身
     return isMatch(s.slice(1), p.slice(1));
   }
+  // 关键点三： 如果*前的字符匹配0遍，作为特殊情况处理掉
   if (isMatch(s, p.slice(2))) return true;
+
+  
   for (var i = 0; i < sLength; i++) {
     if (s[i] !== p[0] && p[0] !== '.') return false;
     if (isMatch(s.slice(i + 1), p.slice(2))) return true;

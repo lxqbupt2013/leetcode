@@ -20,7 +20,7 @@
  * @return {boolean}
  */
 var isPalindrome = function (s) {
-  //[^XYZ]反向字符集，匹配括号中没有出现的字符
+  //关键点： [^XYZ]反向字符集，匹配括号中没有出现的字符
   var replacedS = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
   if (replacedS.length === 0) return true;
   var i = 0;

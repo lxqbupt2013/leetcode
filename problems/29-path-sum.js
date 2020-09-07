@@ -30,6 +30,7 @@
  * @return {boolean}
  */
 // 递归解法
+// 树首先考虑递归
 var hasPathSum = function (root, sum) {
   if (root === null) return false;
   if (root.val === sum && root.left === null && root.right === null) return true;

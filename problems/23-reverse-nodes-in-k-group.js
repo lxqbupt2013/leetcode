@@ -53,6 +53,8 @@ function reverseKGroup(head, k) {
   return tail;
 }
 
+
+// 关键点： 交换节点
 function reverse(curr) {
   var prev = null;
   while (curr) {

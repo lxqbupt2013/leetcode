@@ -20,6 +20,10 @@
  * @param {number} target
  * @return {number[]}
  */
+
+ // 重要前提： 一定有一个唯一的解决方案
+
+ // reduce() 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。
 var twoSum = function (nums, target) {
   // Use a hash to store value-to-index pairs
   var hash = nums.reduce(function (prev, item, index) {

@@ -28,8 +28,11 @@ var ListNode = require('../../structures/ListNode');
 // 新建节点法
 var mergeTwoLists = function (l1, l2) {
   if (!l1 || !l2) return l1 || l2;
-  const r = new ListNode(0);
-  let l = r;
+
+  // 用一个变量把新链表的头存储下来，用于最后返回
+  // 新建链表节点的写法
+  const head = new ListNode(0);
+  let l = head;
   while (l1 && l2) {
     if (l1.val <= l2.val) {
       l.next = l1;
@@ -42,5 +45,5 @@ var mergeTwoLists = function (l1, l2) {
   }
   if (l1) l.next = l1;
   if (l2) l.next = l2;
-  return r.next;
+  return head.next;
 };

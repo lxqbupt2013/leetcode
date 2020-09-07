@@ -26,6 +26,8 @@
 var fourSum = function (nums, target) {
   const r = [];
   nums.sort((a, b) => a - b);
+
+  // 将数组转化为字符串后比较是否相等，来判断元素是否已存在于数组中
   const isNotIn = _arr => {
     for (let i = 0; i < r.length; i++) {
       if (_arr.join('-') === r[i].join('-')) return false;

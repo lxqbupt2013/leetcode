@@ -26,10 +26,15 @@
   * @param {number} x
   * @return {number}
   */
+
+// 注意： 所有涉及整数输出的题，要注意整数可表示范围的边界
+
 var reverse = function (x) {
   var pn = x >= 0 ? '' : '-';
   var num = Math.abs(x);
+  // 关键点一： 用split和reverse和join组合实现
   var result = Number(pn + num.toString().split('').reverse().join(''));
+  // 关键点二： 范围检测，js可表示的最大整数范围是正负2的31次方
   if (result > Math.pow(2, 31)) {
     return 0;
   }

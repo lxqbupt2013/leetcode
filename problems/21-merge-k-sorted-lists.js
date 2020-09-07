@@ -22,7 +22,8 @@ var ListNode = require('../../structures/ListNode');
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
-// 递归
+// 经典递归
+// 二分排序法相同的思路
 var mergeKLists = function (lists) {
   if (lists.length === 0) return null;
   if (lists.length === 1) return lists[0];

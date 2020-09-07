@@ -31,5 +31,7 @@ var removeDuplicates = function (nums) {
       hash[nums[i]] = true;
     }
   }
+
+  // 获取对象的长度
   return Object.keys(hash).length;
 };

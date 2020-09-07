@@ -11,6 +11,9 @@
  * @param {number[]} nums2
  * @return {number}
  */
+
+
+ // 思路： 先把两个数组合并成一个有序数组，然后找中点位置
 var findMedianSortedArrays = function (nums1, nums2) {
   return findMedian(merge(nums1, nums2));
 };
@@ -37,6 +40,7 @@ function merge(nums1, nums2) {
     }
   }
   if (i === nums1Length) {
+    // 关键点： concat和slice的组合写法
     result = result.concat(nums2.slice(j));
   } else if (j === nums2Length) {
     result = result.concat(nums1.slice(i));
